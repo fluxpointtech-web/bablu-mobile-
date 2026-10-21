@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bablu Mobile Repairing Centre</title>
+<meta name="description" content="Mobile phone repair services in Mota Borsara, Gujarat. Contact Bablu Mobile Repairing Centre for a repair quote.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#080d18;
+  --panel:#101827;
+  --blue:#4da3ff;
+  --cyan:#57e6e0;
+  --text:#f4f7fb;
+  --muted:#a5b2c5;
+  --line:rgba(255,255,255,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1150px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080d18eF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font:800 19px Manrope,sans-serif}
+.logo span{color:var(--cyan)}
+.logo small{display:block;font:600 10px "DM Sans";letter-spacing:2px;color:var(--muted)}
+.links{display:flex;gap:22px;align-items:center}
+.links a{font-size:13px;color:#d0d9e7}
+.links a:hover{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:11px;border:1px solid transparent;font-size:14px;font-weight:700;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,var(--cyan),#83baff);color:#06111c}
+.outline{border-color:var(--line);background:#ffffff07;color:white}
+.menu{display:none;background:var(--panel);border:1px solid var(--line);padding:8px 12px;border-radius:9px;color:white}
+.hero{padding:85px 0 65px;background:radial-gradient(ellipse at 85% 10%,#216bc52a,transparent 45%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border-radius:30px;border:1px solid #57e6e033;color:var(--cyan);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.2;letter-spacing:-.8px}
+h1{font-size:clamp(39px,5vw,65px);margin:22px 0}
+.gradient{background:linear-gradient(100deg,#fff,#9ed4ff,var(--cyan));background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero p{font-size:16px;color:var(--muted);max-width:580px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0}
+.checks{display:flex;gap:17px;flex-wrap:wrap;font-size:12px;color:#c6d1df}
+.checks span:before{content:"? ";color:var(--cyan);font-weight:bold}
+.visual{min-height:360px;display:grid;place-items:center;position:relative}
+.glow{position:absolute;width:300px;height:300px;border-radius:50%;background:#278bff20;filter:blur(25px)}
+.phone{position:relative;width:180px;height:320px;border:5px solid #8096ae;border-radius:31px;background:linear-gradient(150deg,#193e5d,#091320);box-shadow:0 30px 80px #0008;transform:rotate(-8deg);display:grid;place-items:center}
+.phone:before{content:"";position:absolute;top:9px;width:65px;height:14px;background:#05090f;border-radius:20px}
+.phone-content{text-align:center;padding:20px}
+.phone-content .symbol{font-size:62px}
+.phone-content strong{display:block;font:800 14px Manrope;margin-top:10px}
+.phone-content small{font-size:9px;letter-spacing:2px;color:var(--cyan)}
+.float{position:absolute;padding:13px 16px;background:#111f31;border:1px solid var(--line);border-radius:13px;font-size:12px;box-shadow:0 15px 35px #0005}
+.float strong{display:block}
+.float small{color:var(--muted)}
+.f1{top:40px;left:0}.f2{right:0;bottom:35px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;background:#ffffff05}
+.stat{text-align:center;padding:22px 10px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;font:800 23px Manrope}
+.stat small{font-size:11px;color:var(--muted)}
+section{padding:75px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 38px}
+.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,43px);margin:12px 0}
+.section-head p{color:var(--muted)}
+.services{background:linear-gradient(180deg,#0b1220,#0e1726)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:24px;border:1px solid var(--line);background:linear-gradient(145deg,#121e30,#0c1421);border-radius:18px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#57e6e055}
+.icon{width:47px;height:47px;display:grid;place-items:center;background:#4da3ff19;border:1px solid #4da3ff30;color:var(--cyan);border-radius:13px;font-size:23px;margin-bottom:16px}
+.card h3{font-size:18px;margin-bottom:9px}
+.card p{font-size:13px;color:var(--muted)}
+.brands{text-align:center;margin-top:25px;color:var(--muted);font-size:13px}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.pills span{padding:6px 12px;border:1px solid var(--line);border-radius:30px;background:#ffffff05;color:#dce6f2}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust .card{padding:20px}
+.trust .icon{font-size:20px}
+.note{text-align:center;font-size:11px;color:#8493a7;margin-top:18px}
+.steps{background:#0b1220}
+.step-num{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(120deg,var(--blue),var(--cyan));color:#06111c;font-weight:900;margin-bottom:18px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stars{color:#ffd479;letter-spacing:3px}
+blockquote{font-size:13px;color:#d7e0ec;margin:15px 0}
+.review-name{font-size:12px;color:var(--muted)}
+.placeholder{font-size:10px;color:#8493a7;margin-top:12px}
+.contact{background:linear-gradient(180deg,#0b1220,#080d18)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}
+.panel h3{font-size:22px;margin-bottom:20px}
+.info{display:flex;gap:12px;margin:19px 0}
+.info-icon{flex:0 0 40px;height:40px;display:grid;place-items:center;border-radius:11px;background:#4da3ff18;color:var(--cyan)}
+.info strong{display:block;font-size:13px}
+.info p,.info a{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.info a:hover{color:var(--cyan)}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.map{height:230px;border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-top:18px}
+.map iframe{width:100%;height:100%;border:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin-bottom:13px}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:#d5deea}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #ffffff1b;background:#0a1220;color:white;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue)}
+textarea{min-height:100px;resize:vertical}
+select option{background:#101827}
+form .btn{width:100%}
+.form-note{font-size:11px;color:#8493a7;margin-top:12px}
+#status{font-size:12px;color:var(--cyan);margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-links{display:flex;gap:15px}
+.wa-float{position:fixed;right:20px;bottom:20px;width:55px;height:55px;border-radius:50%;background:#25d366;color:#052c16;display:grid;place-items:center;font-size:25px;font-weight:bold;box-shadow:0 10px 30px #25d36655;z-index:30}
+@media(max-width:900px){.hero-grid{gap:20px}.links{gap:12px}.links a{font-size:12px}.trust{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){
+ .container{width:92%}
+ nav{min-height:68px}
+ .menu{display:block}
+ .links{display:none;position:absolute;top:68px;left:0;right:0;background:#0b1220;padding:15px 4%;border-bottom:1px solid var(--line)}
+ .links.open{display:flex;flex-direction:column;align-items:stretch;gap:0}
+ .links a{padding:11px;border-bottom:1px solid #ffffff0b;font-size:14px}
+ .nav-call{display:none}
+ .hero{padding:55px 0 45px}
+ .hero-grid{grid-template-columns:1fr}
+ .hero p{font-size:15px}
+ .visual{min-height:330px}
+ .phone{width:160px;height:285px}
+ .f1{left:0;top:35px}.f2{right:0;bottom:25px}
+ .stats{grid-template-columns:1fr 1fr}
+ .stat:nth-child(2){border-right:0}
+ .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ section{padding:60px 0}
+ .grid,.reviews,.contact-grid{grid-template-columns:1fr}
+ .trust{grid-template-columns:1fr 1fr}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+}
+@media(max-width:420px){
+ .logo{font-size:15px}
+ .actions .btn{width:100%}
+ .trust{grid-template-columns:1fr}
+ .float{font-size:10px;padding:10px}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">BABLU MOBILE <span>?</span><small>REPAIRING CENTRE</small></a>
+    <div class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Choose Us</a>
+      <a href="#process">How It Works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a class="btn outline nav-call" href="tel:+917990764176">? Call Now</a>
+      <a class="btn primary" href="#booking">Get a Quote</a>
+      <button class="menu" id="menuBtn" aria-label="Toggle menu">?</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">? Your local gadget repair experts</span>
+      <h1>Fast, Reliable Mobile Repair in <span class="gradient">Mota Borsara.</span></h1>
+      <p>Cracked screen, weak battery, or a phone that won't charge? Get friendly service, clear quotes, and quality-focused repairs for the devices you use every day. Same-day service may be available for common repairs.</p>
+      <div class="actions">
+        <a class="btn primary" href="#booking">Get a Free Quote ?</a>
+        <a class="btn outline" href="tel:+917990764176">? Call Now</a>
+      </div>
+      <div class="checks"><span>Clear estimates</span><span>Popular phone brands</span><span>Local service</span></div>
+    </div>
+    <div class="visual">
+      <div class="glow"></div>
+      <div class="float f1">? <strong>Device care</strong><small>Quality-focused repairs</small></div>
+      <div class="phone"><div class="phone-content"><div class="symbol">??</div><strong>DEVICE CARE</strong><small>REPAIR • RESTORE</small></div></div>
+      <div class="float f2">? <strong>Quote before repair</strong><small>Know the options first</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="stats">
+    <div class="stat"><strong>6+</strong><small>Core repair services</small></div>
+    <div class="stat"><strong>90 Days*</strong><small>Parts warranty offer</small></div>
+    <div class="stat"><strong>Quick*</strong><small>Common repair options</small></div>
+    <div class="stat"><strong>Multi-brand</strong><small>Phone repair support</small></div>
+  </div>
+  <p class="note">*Warranty and repair time depend on the device, part availability, and shop policy. Confirm before service.</p>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head"><span class="kicker">What we repair</span><h2>Expert care for your <span class="gradient">everyday tech.</span></h2><p>We inspect the problem and explain the available repair options before work begins.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">?</div><h3>Screen Replacement</h3><p>Help with cracked glass, damaged displays, touch problems, and screen faults.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Battery Replacement</h3><p>Battery issues, poor backup, unexpected shutdowns, and charging concerns.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Charging Port Fixes</h3><p>Diagnosis for loose connections, slow charging, or phones that won't charge.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Water Damage Recovery</h3><p>Device inspection and repair options after spills or accidental water exposure.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Camera Repairs</h3><p>Help with blurry photos, camera errors, focus issues, and damaged components.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Software Troubleshooting</h3><p>Support for software errors, boot issues, updates, and performance problems.</p></article>
+    </div>
+    <div class="brands">Popular brands supported
+      <div class="pills"><span>Apple iPhone</span><span>Samsung</span><span>OnePlus</span><span>Redmi / Xiaomi</span><span>Vivo</span><span>OPPO</span><span>Realme</span><span>More</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Why choose us</span><h2>Good service. <span class="gradient">No guesswork.</span></h2><p>Our goal is to make mobile repairs straightforward and convenient.</p></div>
+    <div class="trust">
+      <article class="card"><div class="icon">?</div><h3>No Fix, No Fee*</h3><p>Ask about any diagnostic or repair charges before approving work.</p></article>
+      <article class="card"><div class="icon">?</div><h3>90-Day Warranty*</h3><p>Warranty may apply to eligible parts. Confirm terms with the shop.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Quality Parts</h3><p>Ask about original or high-grade compatible part options for your device.</p></article>
+      <article class="card"><div class="icon">?</div><h3>Quick Turnaround</h3><p>Some common repairs may be quick, depending on the issue and parts.</p></article>
+    </div>
+    <p class="note">*Confirm exact fees, warranty coverage, part options, and repair time with the shop.</p>
+  </div>
+</section>
+
+<section class="steps" id="process">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Simple process</span><h2>Back to working in <span class="gradient">three steps.</span></h2><p>A straightforward repair process from diagnosis to pickup.</p></div>
+    <div class="grid">
+      <article class="card"><div class="step-num">01</div><h3>Bring Your Device</h3><p>Visit our Mota Borsara shop with your phone and describe the problem.</p></article>
+      <article class="card"><div class="step-num">02</div><h3>Diagnosis & Quote</h3><p>Understand the issue, likely fix, estimated cost, and expected timing.</p></article>
+      <article class="card"><div class="step-num">03</div><h3>Repair & Pickup</h3><p>Once you approve, we carry out the agreed repair and notify you when ready.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Customer experiences</span><h2>Service that puts people <span class="gradient">first.</span></h2><p>These are sample review placeholders. Replace them with genuine customer reviews before launch.</p></div>
+    <div class="reviews">
+      <article class="card"><div class="stars">?????</div><blockquote>“The repair options were explained clearly, and the process felt easy to understand.”</blockquote><strong>Sample Customer 1</strong><p class="placeholder">PLACEHOLDER — REPLACE WITH A REAL REVIEW</p></article>
+      <article class="card"><div class="stars">?????</div><blockquote>“I appreciated the clear estimate and friendly communication before deciding.”</blockquote><strong>Sample Customer 2</strong><p class="placeholder">PLACEHOLDER — REPLACE WITH A REAL REVIEW</p></article>
+      <article class="card"><div class="stars">?????</div><blockquote>“A convenient local repair option with the expected price discussed upfront.”</blockquote><strong>Sample Customer 3</strong><p class="placeholder">PLACEHOLDER — REPLACE WITH A REAL REVIEW</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Visit or get in touch</span><h2>Let's get your device <span class="gradient">fixed.</span></h2><p>Call, chat on WhatsApp, or request a repair quote online.</p></div>
+    <div class="contact-grid">
+      <div class="panel">
+        <h3>Contact details</h3>
+        <div class="info"><div class="info-icon">?</div><div><strong>Shop address</strong><p>Bablu Mobile Repairing Centre, Shop No. 20, Shyam Complex, Gujarat State Highway 65, 76 Mota Borsara, Gujarat 394110, India</p><p style="margin-top:8px"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bablu+Mobile+Repairing+Centre+Shop+20+Shyam+Complex+Mota+Borsara+Gujarat+394110">Open directions in Google Maps ?</a></p></div></div>
+        <div class="info"><div class="info-icon">?</div><div><strong>Phone number</strong><a href="tel:+917990764176">079907 64176</a><p>Tap Call Now to open your phone dial pad.</p></div></div>
+        <div class="info"><div class="info-icon">?</div><div><strong>Working hours</strong><p>Please call to confirm today's opening and closing time.</p></div></div>
+        <div class="contact-actions">
+          <a class="btn primary" href="tel:+917990764176">? Call Now</a>
+          <a class="btn outline" target="_blank" rel="noopener" href="https://wa.me/917990764176?text=Hello%20Bablu%20Mobile%20Repairing%20Centre%2C%20I%20need%20a%20repair%20quote.">WhatsApp ?</a>
+        </div>
+        <div class="map"><iframe title="Map to Bablu Mobile Repairing Centre" loading="lazy" src="https://maps.google.com/maps?q=Bablu%20Mobile%20Repairing%20Centre%2C%20Mota%20Borsara%2C%20Gujarat%20394110&z=14&output=embed"></iframe></div>
+      </div>
+
+      <form class="panel" id="booking">
+        <h3>Request a repair quote</h3>
+        <p style="color:var(--muted);font-size:13px;margin:-10px 0 20px">Fill in your details. WhatsApp will open with your message ready to send.</p>
+        <div class="form-grid">
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name" autocomplete="name"></div>
+          <div class="field"><label for="phone">Your phone *</label><input id="phone" name="phone" type="tel" required placeholder="Contact number" autocomplete="tel"></div>
+          <div class="field"><label for="brand">Device brand *</label><select id="brand" name="brand" required><option value="">Choose brand</option><option>Apple iPhone</option><option>Samsung</option><option>OnePlus</option><option>Redmi / Xiaomi</option><option>Vivo</option><option>OPPO</option><option>Realme</option><option>Other</option></select></div>
+          <div class="field"><label for="repair">Repair needed *</label><select id="repair" name="repair" required><option value="">Choose repair</option><option>Screen replacement</option><option>Battery replacement</option><option>Charging port</option><option>Water damage</option><option>Camera repair</option><option>Software issue</option><option>Other / not sure</option></select></div>
+          <div class="field full"><label for="model">Device model</label><input id="model" name="model" placeholder="e.g. iPhone 13, Samsung A54"></div>
+          <div class="field full"><label for="details">Describe the issue</label><textarea id="details" name="details" placeholder="Tell us what happened to your phone"></textarea></div>
+          <div class="field full"><button class="btn primary" type="submit">Send Quote Request on WhatsApp ?</button></div>
+        </div>
+        <p class="form-note">Review your message in WhatsApp and press Send. This demo form does not save bookings on a server.</p>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© <span id="year"></span> Bablu Mobile Repairing Centre. All rights reserved.</span>
+    <div class="footer-links"><a href="#services">Services</a><a href="#contact">Contact</a><a href="tel:+917990764176">Call us</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" href="https://wa.me/917990764176?text=Hello%20Bablu%20Mobile%20Repairing%20Centre%2C%20I%20need%20help%20with%20a%20repair.">?</a>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  menuBtn.textContent = navLinks.classList.contains('open') ? '?' : '?';
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.textContent = '?';
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('booking').addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+
+  const data = new FormData(this);
+  const message = [
+    'Hello Bablu Mobile Repairing Centre, I would like a repair quote.',
+    '',
+    'Name: ' + data.get('name'),
+    'My phone: ' + data.get('phone'),
+    'Device brand: ' + data.get('brand'),
+    'Repair needed: ' + data.get('repair'),
+    'Device model: ' + (data.get('model') || 'Not specified'),
+    'Issue details: ' + (data.get('details') || 'Not specified')
+  ].join('\n');
+
+  document.getElementById('status').textContent =
+    'Opening WhatsApp. Review your request and press Send.';
+  window.open(
+    'https://wa.me/917990764176?text=' + encodeURIComponent(message),
+    '_blank',
+    'noopener,noreferrer'
+  );
+});
+</script>
+</body>
+</html>
